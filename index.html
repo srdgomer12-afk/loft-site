@@ -1,26 +1,358 @@
 <!doctype html>
-<html lang="tr">
+<html lang="tr" class="no-js">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>LOFT | Kahve &amp; Kafe</title>
+  <meta name="description" content="LOFT: mat siyah ve altın detaylarla tasarlanmış, sakin ve prestijli bir kafe. Kahveler, tatlılar ve özenli sunumlarla yavaşlamak için.">
+  <meta name="theme-color" content="#0b0b0a">
   <meta name="color-scheme" content="dark">
-  <title>LOFT Yönetim</title>
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta name="robots" content="index, follow">
+
+  <!-- YAYINA ALMADAN ÖNCE: YOUR-DOMAIN.com yerine gerçek alan adını yazın (canonical, og:url, sitemap.xml, robots.txt, JSON-LD). -->
+  <link rel="canonical" href="https://YOUR-DOMAIN.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="LOFT">
+  <meta property="og:title" content="LOFT | Kahve &amp; Kafe">
+  <meta property="og:description" content="Tavanı yüksek, kahvesi derin. Mat siyah ve altının sıcaklığında bir kafe.">
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/">
+  <!-- Paylaşım görseli hazır olunca açın: <meta property="og:image" content="https://YOUR-DOMAIN.com/images/og-cover.jpg"> -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap">
-  <link rel="stylesheet" href="admin.css">
-</head>
-<body>
-  <div id="app"><p class="boot">Yükleniyor…</p></div>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <link rel="stylesheet" href="css/style.css">
 
-  <!-- Varsayılan içerik: panel, sitenin kendi dosyalarını okur -->
-  <script src="../js/config.js"></script>
-  <script src="../js/menu-data.js"></script>
-  <script src="../js/art.js"></script>
-  <script src="../js/live-schema.js"></script>
-  <script src="admin.js"></script>
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "LOFT",
+    "description": "Mat siyah ve altın detaylarla tasarlanmış, sakin ve prestijli bir kafe.",
+    "url": "https://YOUR-DOMAIN.com/"
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <div class="progress" aria-hidden="true"><span data-progress></span></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" data-header>
+    <div class="wrap header-inner">
+      <a class="brand" href="#anasayfa" aria-label="LOFT, ana sayfaya git">LOFT</a>
+
+      <nav class="nav" aria-label="Ana menü">
+        <ul>
+          <li><a href="#hakkimizda" data-nav="hakkimizda">Hakkımızda</a></li>
+          <li><a href="#menu" data-nav="menu">Menü</a></li>
+          <li><a href="#galeri" data-nav="galeri">Galeri</a></li>
+          <li><a href="#iletisim" data-nav="iletisim">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--gold btn--sm header-cta" href="#iletisim">Bize ulaşın</a>
+
+      <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Menüyü aç" data-burger>
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobil menü -->
+  <div class="drawer" id="drawer" aria-hidden="true" inert data-drawer>
+    <nav aria-label="Mobil menü">
+      <a class="drawer__link" style="--i:0" href="#hakkimizda" data-nav="hakkimizda">Hakkımızda</a>
+      <a class="drawer__link" style="--i:1" href="#menu" data-nav="menu">Menü</a>
+      <a class="drawer__link" style="--i:2" href="#galeri" data-nav="galeri">Galeri</a>
+      <a class="drawer__link" style="--i:3" href="#iletisim" data-nav="iletisim">İletişim</a>
+    </nav>
+    <div class="drawer__actions">
+      <a class="btn btn--gold" href="#" data-link="phone">Ara</a>
+      <a class="btn btn--ghost" href="#" data-link="instagram">Instagram</a>
+    </div>
+  </div>
+
+  <main id="icerik">
+
+    <!-- ============ ANA SAYFA / HERO ============ -->
+    <section class="hero" id="anasayfa" aria-labelledby="hero-title">
+      <div class="hero__media" data-slot="hero" data-eager aria-hidden="true"></div>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>
+      <div class="hero__light" aria-hidden="true"></div>
+
+      <!-- Endüstriyel pencere çerçevesi: çizgiler sayfa açılırken çizilir -->
+      <div class="frame" aria-hidden="true">
+        <i class="h" style="top:0;--d:.1"></i>
+        <i class="h" style="top:38%;--d:.7"></i>
+        <i class="h" style="top:70%;--d:.8"></i>
+        <i class="h" style="bottom:0;--d:.3"></i>
+        <i class="v" style="left:0;--d:.2"></i>
+        <i class="v" style="left:33.333%;--d:.5"></i>
+        <i class="v" style="left:66.666%;--d:.6"></i>
+        <i class="v" style="right:0;--d:.4"></i>
+      </div>
+
+      <div class="wrap hero__content">
+        <h1 class="hero__mark" id="hero-title">
+          <span style="--i:0">L</span><span style="--i:1">O</span><span style="--i:2">F</span><span style="--i:3">T</span>
+          <span class="sr-only">Kafe</span>
+        </h1>
+        <p class="hero__slogan hero__in" style="--i:0">Tavanı yüksek, kahvesi derin.</p>
+        <p class="hero__lead hero__in" style="--i:1">Siyahın sessizliği, altının sıcaklığı. Acele etmeyen bir fincan için doğru yerdesiniz.</p>
+        <div class="hero__actions hero__in" style="--i:2">
+          <a class="btn btn--gold" href="#menu">Menüyü incele</a>
+          <a class="btn btn--ghost" href="#iletisim">İletişime geç</a>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#hakkimizda" aria-label="Aşağı kaydır"><span></span></a>
+    </section>
+
+    <!-- ============ HAKKIMIZDA ============ -->
+    <section class="section about" id="hakkimizda" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <span class="rule" aria-hidden="true"></span>
+          <h2 class="sec-title" id="about-title">Yüksek tavanlı bir mekân, yavaş içilen bir kahve.</h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__text" data-reveal>
+            <p>LOFT, Bingöl'ün dağdan inen uzun kışlarında, insanın içini ısıtacak sakin bir köşe kurma fikriyle doğdu. Dışarıda kar ve soğuk; içeride ham dokular, mat siyah yüzeyler ve altının ince parıltısı.</p>
+            <p>Burada kahve acele edilmeden hazırlanır, masaya küçük bir ritüel gibi gelir. Bingöl'ün misafirperver sohbetini, sade ve sessiz bir masada kahveyle buluşturuyoruz.</p>
+
+            <dl class="facts">
+              <div class="facts__row">
+                <dt>Mekân</dt>
+                <dd>Geniş pencereler, yumuşak ışık ve sakin bir oturma düzeni.</dd>
+              </div>
+              <div class="facts__row">
+                <dt>Kahve</dt>
+                <dd>Özenle hazırlanan, dengeli ve net tatlar.</dd>
+              </div>
+              <div class="facts__row">
+                <dt>Sunum</dt>
+                <dd>Sade tabaklar, ince detaylar, her masada küçük bir ritüel.</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="about__visual" data-reveal style="--rd:.15s">
+            <div class="about__a ph" data-slot="about-1" data-art="window" data-alt="LOFT kafe iç mekânı"></div>
+            <div class="about__b ph" data-slot="about-2" data-art="cup" data-alt="Özenle hazırlanmış bir fincan kahve"></div>
+            <div class="about__c ph" data-slot="about-3" data-art="plate" data-alt="LOFT'ta sade bir tabakla sunulan kahve ve tatlı"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MENÜ ============ -->
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="wrap">
+        <div class="sec-head sec-head--split" data-reveal>
+          <span class="rule" aria-hidden="true"></span>
+          <h2 class="sec-title" id="menu-title">Menü</h2>
+          <p class="sec-lead">Kahveden tatlıya, günün her saatine eşlik eden seçki.</p>
+        </div>
+
+        <p class="notice" data-demo-notice hidden>Bu menü örnek içeriktir. Ürünler ve fiyatlar kafe tarafından güncellenecektir.</p>
+
+        <div class="menu__root" data-menu data-reveal>
+          <noscript><p class="notice">Menüyü görüntülemek için JavaScript gereklidir.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERİ ============ -->
+    <section class="section gallery" id="galeri" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <div class="sec-head sec-head--split" data-reveal>
+          <span class="rule" aria-hidden="true"></span>
+          <h2 class="sec-title" id="gallery-title">Galeri</h2>
+          <p class="sec-lead">Fincanlardan masalara, LOFT'tan kareler. Büyütmek için bir görsele dokunun.</p>
+        </div>
+
+        <ul class="mosaic" data-reveal>
+          <li class="tile tile--a" data-tile>
+            <button class="tile__btn" type="button" aria-label="Kafe iç mekânı görselini büyüt">
+              <span class="ph" data-slot="g1" data-art="window" data-alt="Kafe iç mekânı"></span>
+              <span class="tile__cap">Kafe iç mekânı</span>
+            </button>
+          </li>
+          <li class="tile tile--b" data-tile>
+            <button class="tile__btn" type="button" aria-label="Kahve sunumu görselini büyüt">
+              <span class="ph" data-slot="g2" data-art="cup" data-alt="Kahve sunumu"></span>
+              <span class="tile__cap">Kahve sunumu</span>
+            </button>
+          </li>
+          <li class="tile tile--c" data-tile>
+            <button class="tile__btn" type="button" aria-label="Tatlı görselini büyüt">
+              <span class="ph" data-slot="g3" data-art="cake" data-alt="Tatlı tabağı"></span>
+              <span class="tile__cap">Tatlılar</span>
+            </button>
+          </li>
+          <li class="tile tile--d" data-tile>
+            <button class="tile__btn" type="button" aria-label="Masa dekorasyonu görselini büyüt">
+              <span class="ph" data-slot="g4" data-art="vase" data-alt="Masa ve dekorasyon detayı"></span>
+              <span class="tile__cap">Masa ve dekor</span>
+            </button>
+          </li>
+          <li class="tile tile--e" data-tile>
+            <button class="tile__btn" type="button" aria-label="Aydınlatma detayı görselini büyüt">
+              <span class="ph" data-slot="g5" data-art="lamp" data-alt="Mekândan bir aydınlatma detayı"></span>
+              <span class="tile__cap">Işık ve atmosfer</span>
+            </button>
+          </li>
+          <li class="tile tile--f" data-tile>
+            <button class="tile__btn" type="button" aria-label="Soğuk içecek görselini büyüt">
+              <span class="ph" data-slot="g6" data-art="iced" data-alt="Soğuk kahve sunumu"></span>
+              <span class="tile__cap">Soğuk içecekler</span>
+            </button>
+          </li>
+          <li class="tile tile--g" data-tile>
+            <button class="tile__btn" type="button" aria-label="Yiyecek görselini büyüt">
+              <span class="ph" data-slot="g7" data-art="plate" data-alt="Yiyecek sunumu"></span>
+              <span class="tile__cap">Yiyecekler</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ İLETİŞİM ============ -->
+    <section class="section contact" id="iletisim" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="sec-head sec-head--split" data-reveal>
+          <span class="rule" aria-hidden="true"></span>
+          <h2 class="sec-title" id="contact-title">Bizi ziyaret edin</h2>
+          <p class="sec-lead">Konum, çalışma saatleri ve bize ulaşmanın yolları.</p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info" data-reveal>
+            <div class="info">
+              <h3 class="info__label">Telefon</h3>
+              <p class="info__value" data-field="phone">Telefon numarası yakında eklenecek</p>
+              <a class="link-gold" href="#" data-link="phone">Hemen ara</a>
+            </div>
+
+            <div class="info">
+              <h3 class="info__label">Adres</h3>
+              <address class="info__value" data-field="address">Adres bilgisi yakında eklenecek</address>
+              <a class="link-gold" href="#" data-link="directions">Yol tarifi al</a>
+            </div>
+
+            <div class="info">
+              <h3 class="info__label">Instagram</h3>
+              <p class="info__value" data-field="instagram">Instagram hesabı yakında eklenecek</p>
+              <a class="link-gold" href="#" data-link="instagram">Profili aç</a>
+            </div>
+
+            <div class="info">
+              <h3 class="info__label">Çalışma saatleri</h3>
+              <ul class="hours" data-hours></ul>
+            </div>
+          </div>
+
+          <div class="contact__map" data-reveal style="--rd:.15s">
+            <div class="map" data-map>
+              <div class="map__placeholder" data-map-placeholder>
+                <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                  <g fill="none" stroke="currentColor" stroke-width="1">
+                    <path d="M-10 90 L410 60 M-10 210 L410 190 M-10 340 L410 360 M-10 450 L410 430" opacity=".35"/>
+                    <path d="M70 -10 L90 510 M190 -10 L180 510 M300 -10 L320 510" opacity=".35"/>
+                    <path d="M-10 150 L410 270" opacity=".18"/>
+                    <path d="M240 -10 L130 510" opacity=".18"/>
+                  </g>
+                  <g class="map__pin">
+                    <circle cx="200" cy="245" r="26" fill="none" stroke="#c9a45c" stroke-width="1" opacity=".5"/>
+                    <circle cx="200" cy="245" r="9" fill="#c9a45c"/>
+                  </g>
+                </svg>
+                <p class="map__note">Harita, adres eklendiğinde burada görünecek.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <p class="footer__mark" aria-hidden="true">LOFT</p>
+          <p class="footer__tag">Tavanı yüksek, kahvesi derin.</p>
+        </div>
+
+        <nav class="footer__col" aria-label="Alt menü">
+          <h2 class="footer__title">Sayfalar</h2>
+          <ul>
+            <li><a href="#hakkimizda">Hakkımızda</a></li>
+            <li><a href="#menu">Menü</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h2 class="footer__title">İletişim</h2>
+          <ul>
+            <li><a href="#" data-link="phone">Telefon</a></li>
+            <li><a href="#" data-link="instagram">Instagram</a></li>
+            <li><a href="#" data-link="directions">Yol tarifi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> LOFT. Tüm hakları saklıdır.</p>
+        <a href="#anasayfa" class="footer__top-link">Başa dön</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bildirim -->
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <!-- Galeri görüntüleyici -->
+  <dialog class="lightbox" aria-label="Galeri görüntüleyici" data-lightbox>
+    <div class="lightbox__shell" data-shell>
+      <button class="lightbox__close" type="button" aria-label="Kapat" data-lb-close>
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+      <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Önceki görsel" data-lb-prev>
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <figure class="lightbox__stage">
+        <div data-stage></div>
+        <figcaption><span data-caption></span> <span class="lightbox__count" data-count></span></figcaption>
+      </figure>
+      <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Sonraki görsel" data-lb-next>
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </dialog>
+
+  <script src="api/bootstrap" defer></script>
+  <script src="js/config.js" defer></script>
+  <script src="js/menu-data.js" defer></script>
+  <script src="js/art.js" defer></script>
+  <script src="js/live-schema.js" defer></script>
+  <script src="js/live.js" defer></script>
+  <script src="js/hero-bg.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
