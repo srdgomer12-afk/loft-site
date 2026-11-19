@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# YOUR-DOMAIN.com yerine gerçek alan adını yazın
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
